@@ -1,10 +1,14 @@
+html{
+    font-size: 10px;
+}
+
 body{
     box-sizing: border-box;
     background-color: rgb(165, 211, 212);
 }
 h2{
     text-align: center;
-    font-size: 30px;
+    font-size: 3rem;
     color: #fff;
 }
 main{
@@ -20,15 +24,17 @@ main{
 .campo-texto{
     width: 50%;
     height: 44px;
-    font-size: 36px;
+    font-size: 3rem;
     border: 1px solid #eeeeee;
     margin-right: 20px;
 }
 
 button{
-    width: 100px;
-    height: 50px;
-    font-size: 18px;
+    max-width: 100px;
+    min-width: 70px;
+    min-height: 50px;
+    max-height: 50px;
+    font-size: 1.8rem;
     color: #fff;
     border: 0px;
 }
@@ -51,19 +57,32 @@ button{
     margin: 0 20px;
 }
 .tarefa{
-    width: calc(50% + 106px);
+    width: calc(40% + 106px);
     margin: 10px auto;
     justify-content: space-between;
 }
 
 .texto-tarefa{
-    font-size: 24px;
-    width: 50%;
+    font-size: 2.1rem;
     color: #000;
     margin: 0px;
-    flex-grow: 2;
+    word-break: break-word;
+    text-align: left;
+    flex: 2;
 }
 
 .concluido{
     background-color: #90ff90;
+}
+
+@media(max-width: 550px){
+    html{
+        font-size: 8px;
+    }
+    .tarefa{
+       width: 90%;
+    }
+    .campo-texto{
+        font-size: 2.5rem;
+    }
 }
